@@ -1,0 +1,25 @@
+SELECT fl.ID_FILIAL, fl.NM_FILIAL, prod.ID_PRODUTO, prod.DS_PRODUTO, est.QT_ESTOQUE_DISPONIVEL 
+FROM tb_estoque est 
+inner JOIN tb_produto prod 
+inner join tb_filial fl 
+ORDER by fl.ID_FILIAL
+
+-------------------------------------------------------------------------------------------------
+
+SELECT nf.NR_NOTA, nf.DT_EMISSAO, ped.NR_PEDIDO, tped.ID_TIPO_PEDIDO,tped.DS_TIPO_PEDIDO, top.ID_TIPO_OPERACAO, top.DS_TIPO_OPERACAO,f.ID_FILIAL,f.NM_FILIAL, tf.DS_TIPO_FILIAL,prod.ID_PRODUTO,prod.DS_PRODUTO
+FROM tb_nf nf
+INNER JOIN tb_pedido ped
+inner JOIN tb_tipo_pedido tped
+INNER join tb_filial f
+INNER JOIN tb_produto prod
+inner join tb_tipo_operacao top
+inner join tb_tipo_filial tf
+
+
+order by top.ID_TIPO_OPERACAO
+
+
+
+
+--------------------------------------
+
